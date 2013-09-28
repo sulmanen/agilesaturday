@@ -1,0 +1,13 @@
+<div class="myTypeahead" ng-controller="myQCtrl">
+    <input type="text" 
+    		ng-model="myQCtrl.q" 
+    		ng-change="myQCtrl.tweets = myQCtrl.search(myQCtrl.q)"/>
+
+    <div class="tweets">
+    	<div class="tweet" 
+    	ng-repeat="tweet in myQCtrl.tweets.statuses"> 
+    		<h2>{{tweet.user.name}}</h2>
+    		<p>{{tweet.text}}</p>
+    	</div>
+    </div>
+</div>
